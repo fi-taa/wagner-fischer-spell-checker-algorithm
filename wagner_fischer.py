@@ -27,11 +27,11 @@ def spell_check(word, dictionary):
         suggestions.append((correct_word, distance))
 
     suggestions.sort(key=lambda x: x[1])
-    return suggestions[:10]
+    return suggestions[:5]
 
 # Example Usage
 dictionary = load_dictionary("words.txt")
-misspelled_word = "wrlod"
+misspelled_word = "algoritm"
 suggestions = spell_check(misspelled_word, dictionary)
 print(f"Top 10 suggestions for '{misspelled_word}':")
 for word, distance in suggestions:
